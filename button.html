@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.button07 {
+  overflow: hidden;
+}
+.button07::before {
+  left: -5%;
+  right: auto;
+  bottom: auto;
+  width: 110%;
+  height: 180%;
+  transform-origin: left bottom;
+  transform: skewY(-10deg) scale(1, 0);
+}
+.button07:hover::before {
+  transform-origin: left top;
+  transform: skewY(-10deg) scale(1, 1);
+}
+.demo-list {
+  padding: 0 0 2em;
+}
+.demo {
+  padding: 2em 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media screen and (min-width:768px) {
+  .demo-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .demo {
+    width: calc(100% / 3);
+  }
+}
+@media screen and (min-width:1024px) {
+  .demo {
+    width: calc(100% / 4);
+    padding: 3em 0;
+  }
+}
+.button {
+  position: relative;
+  display: inline-block;
+  padding: .8em 4em;
+  border: 2px solid #333;
+  color: #333;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  transition: .3s;
+}
+.button::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  background: #0d00ff;
+  transition: transform .3s;
+}
+.button:hover {
+  color: #fff;
+}
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <a class="button button07" href="#" onclick="return false;">Button</a></div>    
+</body>
+</html>

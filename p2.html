@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret One">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Viga">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yanone Kaffeesatz">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fugaz One">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Manrope:wght@400;800&display=swap');
+
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+    :root {
+        --white: rgb(253, 253, 253);
+        --black: rgb(38, 38, 38);
+        --light-black: rgba(80, 80, 80, 0.201);
+        --grey: rgba(80, 80, 80, 0.744);
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    nav {
+        display: flex;
+        background-color: rgb(253, 253, 253);
+        padding: 16px 32px;
+        border-bottom: 0.1px solid rgb(225, 225, 225);
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-main {
+        display: flex;
+        gap: 70px;
+        ;
+    }
+
+    .logo {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 4px;
+        float: right;
+    }
+
+    .logo span {
+        color: rgb(0, 45, 244);
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 50px;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(38, 38, 38);
+        letter-spacing: -0.5px;
+        font-weight: 200;
+    }
+
+    a:hover {
+        color: rgb(0, 45, 244);
+        transition: all 0.5s ease;
+    }
+
+    .nav-link {
+        text-decoration: none;
+    }
+
+    .dropdown {
+        cursor: default;
+    }
+
+    .dropdown ul {
+        display: none;
+        background-color: rgb(251, 251, 251);
+        padding: 16px;
+        list-style: none;
+        transition: all 15s ease;
+
+    }
+
+    .dropdown ul li a {
+        color: var(--grey);
+    }
+
+    .dropdown ul li a:hover {
+        color: var(--black);
+    }
+
+    .dropdown ul li {
+        margin: 8px;
+    }
+
+    .dropdown:hover>ul {
+        display: list-item;
+        position: absolute;
+        list-style: none;
+        transition: all 0.5s ease;
+    }
+
+    .btn {
+        padding: 4px 12px;
+        border-radius: 50px;
+        border: none;
+
+    }
+
+    .btn-primary {
+        background-color: var(--black);
+        color: var(--white);
+        margin-left: 5px;
+    }
+
+    .btn-secondary {
+        background-color: var(--white);
+        color: var(--black);
+        border: 0.1px solid rgb(225, 225, 225);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        background-color: var(--light-black);
+        color: var(--black);
+        transition: all 0.5s ease;
+    }
+
+    .nav-mobile {
+        display: none;
+        background-color: var(--light-black);
+        padding: 48px;
+        list-style: none;
+        transition: all 15s ease;
+    }
+
+    .menu {
+        display: none;
+    }
+    .p1{
+        margin-top: 50px;
+        margin-left: 100px;
+        height: 600px;
+        width: auto;
+        float: left;
+    }
+
+    .zz{
+        font-family: "Raleway";
+        font-size: 100px;
+        float: right;
+        padding: 5px;
+        
+        margin-right: 400px;
+    }
+    .button07 {
+            overflow: hidden;
+        }
+
+        .button07::before {
+            left: -5%;
+            right: auto;
+            bottom: auto;
+            width: 110%;
+            height: 180%;
+            transform-origin: left bottom;
+            transform: skewY(-10deg) scale(1, 0);
+        }
+
+        .button07:hover::before {
+            transform-origin: left top;
+            transform: skewY(-10deg) scale(1, 1);
+        }
+
+        .demo-list {
+            padding: 0 0 2em;
+        }
+
+        .demo {
+            padding: 2em 0;
+            text-align: center;
+            box-sizing: border-box;
+            margin-top: 2%;
+            margin-left:1%;
+        }
+
+        @media screen and (min-width:768px) {
+            .demo-list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .demo {
+                width: calc(100% / 3);
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            .demo {
+                width: calc(100% / 4);
+                padding: 3em 0;
+            }
+        }
+
+        .button {
+            position: relative;
+            display: inline-block;
+            padding: .8em 4em;
+            border: 2px solid #333;
+            color: #333;
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            text-decoration: none;
+            transition: .3s;
+            margin-top: 2%;
+
+        }
+
+        .button::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            content: '';
+            background: rgb(0, 45, 244);
+            transition: transform .3s;
+        }
+
+        .button:hover {
+            color: #fff;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-main">
+            <div class="logo"> DIVIDED <span> SPACE</span></div>
+            <ul class="nav-links">
+                <li class="nav-link"><a href="website.html">Home</a></li>
+                <li class="nav-link"><a href="">Artists</a></li>
+                <li class="nav-link"><a href="">Services </li>
+                <li class="nav-link"><a href="">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="cta">
+            <button class="btn btn-secondary"><a href="#">Log In</a></button>
+            <button class="btn btn-primary">Get Started</button>
+        </div>
+        <div class="menu">
+            <button class="btn btn-primary menu"><i class="bi-list"></i></button>
+            <ul class="nav-mobile">
+                <li class="nav-link"><a href="">Home</a></li>
+                <li class="nav-link"><a href="">Our Team</a></li>
+                <li class="nav-link dropdown"><a href="" class="dropdown">Services <i
+                            class="bi bi-chevron-compact-down"></i></a>
+
+                </li>
+                <li class="nav-link"><a href="">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <img class="p1" src="C:\Users\Sahil\Downloads\a7e58b20-34a7-47e0-b4bb-be8d5d08be5b.jfif">
+    </div>
+    <div class="zz">
+        <p style="font-size: 70px; margin-top:50px;">
+            Wagtail
+        </p>
+        <p>By Helena Wierzbicki</p>
+        <p>Painting, Mixed Media on Paper</p>
+        <p>4"W 4"H (inch)</p>
+        <p style="font-size:50px; font-family:'Times New Roman', Times, serif;">RS 600</p>
+        <DIV class="demo">
+            <a class="button button07" href="#" onclick="return;">BUY NOW</a>
+        </DIV>
+        <ul>
+            <li>
+        <a  style="font-weight: bold;"href="#"> FOR QUERY CLICK HERE</a>
+            </li>
+        <li>
+            <p style="font-weight: bold;">SHIPPING</p>
+            <P>Complimentary shipping within India.</P>
+            <P>Paper works ship in flat/crate packing.</P>
+            <p>Typically ships within 7 days.</p>
+        </li>
+    </ul>
+    </div>
+    
+</body>
+</html>
